@@ -1,0 +1,75 @@
+\documentclass[12pt, bibliography=totoc]{scrartcl}
+\usepackage[headsepline,automark]{scrlayer-scrpage} %Trennlinie an Kopfzeile
+%\usepackage{scrheadings}
+\clearpairofpagestyles
+\lohead{\rightmark}
+%\renewcommand{\partmark}[1]{\relax}% \part daran hindern, den Kolumnentitel zu löschen
+\ohead[]{\pagemark}
+%\ofoot*{\pagemark}
+%%Kopfzeile
+\usepackage{txfonts} %für times new roman
+%\usepackage{helvet} %für arial, dann aber 11pt
+\usepackage[a4paper, left=2.5cm, right=5cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{wasysym}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{caption}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{todonotes}
+\usepackage{enumitem}
+%\uespackage{caption}
+\usepackage[bf]{caption}
+%\renewcommand{\captionfont}{\small\slshape}
+%\renewcommand{\figurename}{Abb.}
+%\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+%\makeatletter \@addtoreset{figure}{section} \makeatother
+%\captionsetup[figure]{skip=1pt}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{threeparttable} %fußnoten unterhalb tabelle
+\usepackage{booktabs} % fuer schone Tabellen
+\usepackage{rotating} % um tabellen auf quer drehen zu koennen http://www.golatex.de/kann-man-tabellen-im-querformat-darstellen-t2003.html
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} %Spalten mit fester breite zentriert
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} %Spalten mit fester breite linksbündig
+%\newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+%\newcolumntype{C}{>{\small\centering\arraybackslash}X}
+\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage{typearea}
+%\usepackage[style=apa]{biblatex}
+\usepackage[style=apa,backend=biber]{biblatex}
+\usepackage[american,ngerman]{babel}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+\usepackage[babel,german=guillemets]{csquotes}
+
+%nach part fängt section wieder mit eins an alte Gestaltung
+%\makeatletter
+%\@addtoreset{section}{part}
+%\makeatother
+%\renewcommand*{\partformat}{\thepart}{}
+%\renewcommand*{\partheadmidvskip}{\nobreak\enskip}
+%\bibliography{/Users/iNge/Dropbox/Biblio/ingesbibneu}
+\bibliography{/Users/iNge/Dropbox/Biblio/library}
+%\bibliography{library}
+\begin{document}
+%\input{titelneu.tex}
+%\listoftodos
+\tableofcontents
+%\listoftables
+\setcounter{page}{1}
+%\thispagestyle{empty}
+\pagebreak
+ich schreibe etzt mal was schönes
+%$body$
+
+\pagebreak
+\printbibliography
+\pagebreak
+%\input{tabelleanalysen}
+%\includepdf{alleine.pdf}
+\end{document}

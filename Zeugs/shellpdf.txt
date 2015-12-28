@@ -1,0 +1,11 @@
+#!/bin/sh
+#Wertzuweisung
+texdatei="Fertig/*.tex"
+bibdatei="*.bcf"
+anschauen="Fertig/*.pdf"
+/usr/local/texlive/2015/bin/x86_64-darwin/pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -enable-write18  $texdatei
+/usr/local/texlive/2015/bin/x86_64-darwin/biber $bibdatei
+/usr/local/texlive/2015/bin/x86_64-darwin/pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -enable-write18 $texdatei
+rm *.aux *.bbl *.bcf *.xml *.bcf *.blg *.log *.out *.synctex.gz *.log *.log *.toc
+mv *.pdf Fertig/
+open /Applications/Skim.app $anschauen
